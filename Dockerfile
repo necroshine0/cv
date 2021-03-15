@@ -20,6 +20,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY CV/flowfram.sty ./
 COPY CV/poe.png ./
 COPY CV/main.tex ./
-COPY runlx.sh
+COPY runlx.sh ./
 
 ENTRYPOINT [ "bash", "runlx.sh" ]
