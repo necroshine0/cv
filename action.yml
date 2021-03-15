@@ -1,0 +1,4 @@
+name: 'CV'
+runs:
+    using: 'docker'
+    image: 'cv'
