@@ -12,14 +12,5 @@ jobs:
             - name: RUN
               uses: ./
 
-            - name: Content-1
-              run: docker ps -a
-              
-            - name: CopyPDF
-              run: |
-                ID=$(docker ps -aqf "name=cv")
-                echo $ID
-                docker cp $ID:main.pdf RESUME.pdf
-                
-            - name: Content-2
-              run: ls
+            - name: Apologizzeee
+              run: echo "PDFка меня победила, извините((("
