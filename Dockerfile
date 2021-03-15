@@ -14,11 +14,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	texlive-pictures \
 	cm-super \
 	texlive-generic-extra \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+        && apt-get clean \
+        && rm -rf /var/lib/apt/lists/*
 
 COPY CV/flowfram.sty ./
 COPY CV/poe.png ./
 COPY CV/main.tex ./
 
-CMD [ "pdflatex", "-interaction=nonstopmode", "main.tex" ]
+ENTRYPOINT [ "pdflatex", "-interaction=nonstopmode", "main.tex" ]
