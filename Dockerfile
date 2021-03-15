@@ -21,4 +21,4 @@ WORKDIR CVdocker
 
 COPY CV/* ./
 
-ENTRYPOINT [ "bash", "runlx.sh" ]
+ENTRYPOINT [ "bash", "CVdocker/runlx.sh" ]
