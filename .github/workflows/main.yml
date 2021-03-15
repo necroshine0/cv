@@ -1,6 +1,6 @@
 name: CI
 
-on: [push, commit_comment]
+on: push
 
 jobs:
     DEPLOY:
