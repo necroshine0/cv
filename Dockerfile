@@ -17,9 +17,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         && apt-get clean \
         && rm -rf /var/lib/apt/lists/*
 
-COPY CV/flowfram.sty ./
-COPY CV/poe.png ./
-COPY CV/main.tex ./
-COPY runlx.sh ./
+COPY flowfram.sty poe.png main.tex ./
 
-ENTRYPOINT [ "bash", "runlx.sh" ]
+ENTRYPOINT [ "pdflatex", "-interaction=nonstopmode", "./main.tex" ]
