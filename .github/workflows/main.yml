@@ -24,7 +24,7 @@ jobs:
               
             - name: RUN
               #uses: ./
-              run: docker run -it cv
+              run: docker run cv
 
             - name: Content-2
               run: ls
