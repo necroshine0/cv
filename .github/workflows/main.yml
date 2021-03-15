@@ -16,9 +16,6 @@ jobs:
               run: |
                 docker build -t cv -f Dockerfile .
               
-            - name: View
-              run: docker ps -a
-              
             - name: Images
               run: docker images
               
