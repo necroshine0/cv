@@ -14,6 +14,7 @@ jobs:
               
             - name: build
               uses: ./
+              id: cv
 
             - name: Content-2
               run: ls
