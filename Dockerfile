@@ -20,4 +20,4 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY CV ./
 
 
-CMD [ "pdflatex", "-interaction=nonstopmode", "main.tex" ]
+CMD [ "pdflatex", "-interaction=nonstopmode", "./main.tex" ]
