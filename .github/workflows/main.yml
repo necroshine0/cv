@@ -23,8 +23,8 @@ jobs:
               run: docker images
               
             - name: RUN
-              uses: ./
-              id: cv
+              #uses: ./
+              run: docker run -it cv
 
             - name: Content-2
               run: ls
