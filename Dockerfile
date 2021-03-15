@@ -17,7 +17,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-COPY CV/* ./
+COPY CV/flowfram.sty ./
+COPY CV/poe.png ./
+COPY CV/main.tex ./
 
-
-CMD [ "pdflatex", "-interaction=nonstopmode", "./main.tex" ]
+CMD [ "pdflatex", "-interaction=nonstopmode", "main.tex" ]
