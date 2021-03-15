@@ -9,6 +9,11 @@ jobs:
             - name: Get-Repository-Copy
               uses: actions/checkout@v2
               
+            - name: Content-1
+              run: ls
+              
             - name: build
               uses: ./
 
+            - name: Content-2
+              run: ls
