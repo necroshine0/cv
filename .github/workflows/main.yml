@@ -1,0 +1,13 @@
+name: CI
+
+on: [push, commit_comment]
+
+jobs:
+    DEPLOY:
+        runs-on:  ubuntu-latest
+        steps:
+            - name: Get-Repository-Copy
+              uses: actions/checkout@v2
+              
+            - name: build
+              uses: actions/action@v1
