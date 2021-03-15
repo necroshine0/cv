@@ -1,4 +1,4 @@
 name: 'cv'
 runs:
     using: 'docker'
-    image: 'latest'
+    image: 'cv'
