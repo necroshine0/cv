@@ -17,6 +17,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         && apt-get clean \
         && rm -rf /var/lib/apt/lists/*
 
-COPY flowfram.sty poe.png main.tex ./
+WORKDIR CVdocker
 
-ENTRYPOINT [ "pdflatex", "-interaction=nonstopmode", "./main.tex" ]
+COPY CV/* ./
+
+ENTRYPOINT [ "bash", "runlx.sh" ]
