@@ -12,7 +12,11 @@ jobs:
             - name: Content-1
               run: ls
               
-            - name: build
+            - name: BUILD
+              run: |
+                docker build -t cv -f Dockerfile .
+              
+            - name: RUN
               uses: ./
               id: cv
 
