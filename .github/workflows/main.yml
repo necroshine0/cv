@@ -16,12 +16,15 @@ jobs:
               run: |
                 docker build -t cv -f Dockerfile .
               
-            - name: Content-2
-              run: ls
+            - name: View
+              run: docker ps -a
+              
+            - name: Images
+              run: docker images
               
             - name: RUN
               uses: ./
               id: cv
 
-            - name: Content-3
+            - name: Content-2
               run: ls
