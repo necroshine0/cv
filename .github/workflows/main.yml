@@ -18,15 +18,6 @@ jobs:
                 ls
                 cd              
 
-                          
-            - name: BUILD
-              run: |
-                docker build -t cv -f Dockerfile .
-              
-            - name: Images
-              run: docker images
-              
-
             - name: RUN
               uses: ./
 
