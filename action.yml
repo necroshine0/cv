@@ -1,3 +1,4 @@
-name: 'CV'
+name: 'cv'
 runs:
     using: 'docker'
+    image: 'cv'
