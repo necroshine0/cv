@@ -2,4 +2,4 @@ name: 'cv'
 description: '#Nodescription'
 runs:
     using: 'docker'
-    image: 'Dockerfile'
+    image: 'cv'
