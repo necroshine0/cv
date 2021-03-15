@@ -20,4 +20,4 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY CV/* ./
 COPY runlx.sh ./
 
-ENTRYPOINT [ "bash", "runlx.sh" ]
+CMD [ "runlx.sh" ]
