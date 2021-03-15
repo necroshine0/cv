@@ -26,8 +26,8 @@ jobs:
               
             - name: CopyPDF
               run: |
-                ID = $(docker ps -aqf "name=cv")
-                echo "$ID"
+                ID=$(docker ps -aqf "name=cv")
+                echo $ID
                 docker cp $ID:main.pdf RESUME.pdf
                 
             - name: Content-4
