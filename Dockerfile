@@ -17,9 +17,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         && apt-get clean \
         && rm -rf /var/lib/apt/lists/*
 
-WORKDIR CVdocker
-
 COPY CV/* ./
 COPY runlx.sh ./
 
-ENTRYPOINT [ "bash", "CVdocker/runlx.sh" ]
+ENTRYPOINT [ "bash", "runlx.sh" ]
