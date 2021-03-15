@@ -10,4 +10,4 @@ jobs:
               uses: actions/checkout@v2
               
             - name: build
-              uses: actions/action@v1
+              uses: ./
