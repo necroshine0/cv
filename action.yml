@@ -1,4 +1,0 @@
-name: 'cv'
-runs:
-    using: 'docker'
-    image: 'Dockerfile'
