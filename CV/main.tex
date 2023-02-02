@@ -1,201 +1,197 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% LaTeX Template: Designer's CV
-%
-% Source: http://www.howtotex.com
-% 
-% Feel free to distribute this example, but please keep the referral
-% to HowToTeX.com
-% 
-% Date: March 2012
-%
-% Modified by Lim Lian Tze to support multiple pages using fix provided at
-% http://www.howtotex.com/templates/creating-a-designers-cv-in-latex/
-% Date: November 2014
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% How to use writeLaTeX: 
-%
-% You edit the source code here on the left, and the preview on the
-% right shows you the result within a few seconds.
-%
-% Bookmark this page and share the URL with your co-authors. They can
-% edit at the same time!
-%
-% You can upload figures, bibliographies, custom classes and
-% styles using the files menu.
-%
-% If you're new to LaTeX, the wikibook is a great place to start:
-% http://en.wikibooks.org/wiki/LaTeX
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt]{spidercv}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{fontawesome}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Document properties and packages
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[a4paper,12pt,final]{memoir}
-
-% misc
-\renewcommand{\familydefault}{bch}	% font
-\pagestyle{empty}					% no pagenumbering
-\setlength{\parindent}{0pt}			% no paragraph indentation
-
-
-% required packages (add your own)
-\usepackage{flowfram}										% column layout
-\usepackage[top=1cm,left=1cm,right=1cm,bottom=1cm]{geometry}% margins
-\usepackage{graphicx}										% figures
-\usepackage{url}											% URLs
-\usepackage[usenames,dvipsnames]{xcolor}					% color
-\usepackage{multicol}										% columns env.
-	\setlength{\multicolsep}{0pt}
-\usepackage{paralist}										% compact lists
-\usepackage{tikz}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Create column layout
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% define length commands
-\setlength{\vcolumnsep}{\baselineskip}
-\setlength{\columnsep}{\vcolumnsep}
-
-% left frame
-\newflowframe{0.2\textwidth}{\textheight}{0pt}{0pt}[left]
-	\newlength{\LeftMainSep}
-	\setlength{\LeftMainSep}{0.2\textwidth}
-	\addtolength{\LeftMainSep}{1\columnsep}
- 
-% small static frame for the vertical line
-\newstaticframe{1.5pt}{\textheight}{\LeftMainSep}{0pt}
- 
-% content of the static frame
-\begin{staticcontents}{1}
-\hfill
-\tikz{%
-	\draw[loosely dotted,color=RoyalBlue,line width=1.5pt,yshift=0]
-	(0,0) -- (0,\textheight);}%
-\hfill\mbox{}
-\end{staticcontents}
- 
-% right frame
-\addtolength{\LeftMainSep}{1.5pt}
-\addtolength{\LeftMainSep}{1\columnsep}
-\newflowframe{0.7\textwidth}{\textheight}{\LeftMainSep}{0pt}[main01]
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% define macros (for convience)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\Sep}{\vspace{1.5em}}
-\newcommand{\SmallSep}{\vspace{0.5em}}
-
-\newenvironment{AboutMe}
-	{\ignorespaces\textbf{\color{RoyalBlue} About me}}
-	{\Sep\ignorespacesafterend}
-	
-\newcommand{\CVSection}[1]
-	{\Large\textbf{#1}\par
-	\SmallSep\normalsize\normalfont}
-
-\newcommand{\CVItem}[1]
-	{\textbf{\color{RoyalBlue} #1}}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Begin document
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
-% Left frame
-%%%%%%%%%%%%%%%%%%%%
-%
-% Upload your own photo using the files menu
-\begin{figure}
-	\hfill
-	\includegraphics[width=0.6\columnwidth]{poe.png}
-	\vspace{-7cm}
-\end{figure}
+    %%%%%%% Printable mode
+    \PrintableMode
 
-\begin{flushright}\small
-	Oleg E. Petrov \\
-	\url{soundtrash0@gmail.com}
-\end{flushright}\normalsize
-\framebreak
+    %----------------------------------------------------------------------------------------
+    %	TOP BAR
+    %----------------------------------------------------------------------------------------
+    \begin{TopBar}{\ColorTextSide}
+        \Name{\ColorHighlight}{Петров Олег}{}{}
 
+        \TextSeparator{\ColorHighlight}{Желаемая должность}
 
-% Right frame
-%%%%%%%%%%%%%%%%%%%%
-\Huge\bfseries {\color{RoyalBlue} Oleg Petrov} \\
-\Large\bfseries  Programmer \\
+        \begin{DoubleColumns}
+            \begin{ItemList}{\ColorHighlight}
+                    \item Intern/Junior Data Scientist
+            \end{ItemList}
+            \nextcolumn
+            \begin{ItemList}{\ColorHighlight}
+                    \item Intern/Junior Data Analyst
+            \end{ItemList}
+        \end{DoubleColumns}
 
-\normalsize\normalfont
+        \vspace*{0.3cm}
 
-% About me
-\begin{AboutMe} 2nd course student. Interested in purchase of new experience in operating on non-trivial projects. Ready to acquire new skills and sharpen the old ones.\\
-Guitar player. Photographer.
+        %%% Contact
+        \TextSeparator{\ColorHighlight}{Контакты}
+        % \SimpleSeparator{\ColorHighlight}
+        \begin{DoubleColumns}
+            \begin{ItemList}{\ColorHighlight}
+                \item [\Large\faEnvelopeO] \href{mailto:oepetrov0@gmail.com}{oepetrov0@gmail.com}
+                \item [\Large\faPaperPlaneO] \href{https://t.me/pauchara0}{pauchara0}
+            \end{ItemList}
+            \nextcolumn
+            \begin{ItemList}{\ColorHighlight}
+                \item [\Large\faGithub] \href{https://github.com/necroshine0}{necroshine0}
+                % \item [\Large\faLinkedinSquare] \href{https://www.linkedin.com/}{romainpc}
+            \end{ItemList}
+            \nextcolumn
+            \begin{ItemList}{\ColorHighlight}
+                % \item [\Large\faLinkedinSquare] \href{https://www.linkedin.com/}{romainpc}
+            \end{ItemList}
+        \end{DoubleColumns}
 
-\end{AboutMe}
-
-% Education
-\CVSection{Education}
-\CVItem{2019 - present, National Research University "Higher School of Economics"}\\
-Educational program: Applied Mathematics and Informatics
-\Sep
-
-% Skills
-\CVSection{Skills}
-\CVItem{Programming languages}
-\begin{multicols}{3}
-\begin{compactitem}[\color{RoyalBlue}$\circ$]
-	\item C++
-	\item C
-	\item C\# (basics)
-	\item Assembly (basics)
-	\item Python
-	%\item SQL (basics)
-\end{compactitem}
-\end{multicols}
-\SmallSep
+    \end{TopBar}
 
 
-\CVItem{IDEs}
-\begin{multicols}{2}
-\begin{compactitem}[\color{RoyalBlue}$\circ$]
-	\item Microsoft Visual Studio 
-	\item JetBrains PyCharm 
-\end{compactitem}
-\end{multicols}
-\SmallSep
 
-\CVItem{Math knowledge}
-\begin{multicols}{2}
-\begin{compactitem}[\color{RoyalBlue}$\circ$]
-	\item Linear algebra and geometry
-	\item Matrix computations (basics)
-	\item Graph theory
-	\item Theory of probability
-\end{compactitem}
-\end{multicols}
-\SmallSep
+    %----------------------------------------------------------------------------------------
+    %	SIDE BAR
+    %----------------------------------------------------------------------------------------
+    \begin{SideBar}{\ColorBackground}{\ColorTextSide}
+        
+        %%% Hard skills
+        \TextSeparatorBis{\ColorHighlight}{Hard skills}{\faGears}
+        \begin{ItemList}{\ColorHighlight}
+            \item [\faCode]Code: Python, C++
+            \item [\faDatabase]Data: numpy, pandas, SQL
+            \item [\faBarChartO]Draw: matplotlib, seaborn, shap
+            \item [\faSpinner]ML: scikit-learn, catboost,\\ \ \ \ \ \ statsmodels, etc.
+            \item [\faConnectdevelop]DL: pytorch, gensim,\\ \ \ \ \ \ transformers, gluonts
+            \item [\faLanguage]Английский язык (B2)
+        \end{ItemList}
 
-\CVItem{Others}
-\begin{multicols}{2}
-\begin{compactitem}[\color{RoyalBlue}$\circ$]
-	\item Bash (basics)
-	\item GDB 
-	\item HTML and CSS
-	\item Algorithms and data structures
+        \vspace*{0.4cm}
+        
+        %%% Soft skills
+        \TextSeparatorBis{\ColorHighlight}{Soft skills}{\faUser}
 
-\end{compactitem}
-\end{multicols}
-\Sep 
+        \Label{\ColorHighlight}{Обучаемость}
+        \Label{\ColorHighlight}{Педантичность}
+        \Label{\ColorHighlight}{Адаптивность}
+        \Label{\ColorHighlight}{Коммуникативность}
 
-\CVSection{Personality}
-Good at team work. Pedantic. Able to write good-readable code. Non-conflict.
-\Sep
+        \vspace*{0.7cm}
 
-\clearpage
-\framebreak
+        \TextSeparatorBis{\ColorHighlight}{Skills graph}{\faCodepen}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% End document
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        \begin{SpiderDiagram}{\ColorTextSide}{\ColorHighlight}
+            \addSkill{ML}{5}
+            \addSkill{DL}{3}
+            \addSkill{Math}{4}
+            \addSkill{Analysis}{5}
+            \addSkill{DevOps}{2}
+            
+        \end{SpiderDiagram}
+
+        \vspace*{0.9cm}
+
+        %%% Languages
+        \TextSeparatorBis{\ColorHighlight}{Прочее}{\faObjectGroup}
+            
+        \begin{SkillGauges}{\ColorHighlight}
+            \addGauge{Yandex Datasphere}{4}
+            \addGauge{Yandex Toloka}{3}
+            \addGauge{Bash}{3}
+            \addGauge{Git}{2}
+        \end{SkillGauges}
+        
+    \end{SideBar}
+
+    
+
+    %----------------------------------------------------------------------------------------
+    %	Picture
+    %----------------------------------------------------------------------------------------
+    \DefineProfile{\ColorOther}{\ColorTextSide}{img/cv photo.jpg}
+
+
+
+
+    %----------------------------------------------------------------------------------------
+    %	Main
+    %----------------------------------------------------------------------------------------
+    \begin{MainPart}
+
+    %%% Education
+    \MainTitle{\ColorHighlight}{\ColorTextMain}{Образование}
+    \Experience
+        {\ColorHighlight}
+		{\Large{Бакалавр прикладной математики и информатики}}
+		{НИУ ВШЭ}
+        {2019-2023}
+        {   
+            Специализация <<Машинное обучение и приложения>>, ФКН.\\
+            % Тема диплома: <<Поиск новой физики в данных с помощью генеративных моделей>>.\\
+        }
+
+    %%% Experiences 
+    \MainTitle{\ColorHighlight}{\ColorTextMain}{Опыт работы}
+    \Experience
+        {\ColorHighlight}
+		{\Large{Учебный ассистент}}
+		{НИУ ВШЭ}
+            {С сентября 2021-\faUndo}
+        {   
+            Ассистировал курсы по высшей математике, разработке на Python, теории вероятностей и машинному обучению.\\
+
+            Обязанности: проверка работ студентов, консультирование, помощь в организации учебного процесса.
+        }
+
+    \MainTitle{\ColorHighlight}{\ColorTextMain}{Проекты}
+    \Experience
+        {\ColorHighlight}
+		{\Large\faGithub\ \href{https://github.com/necroshine0/edu-analytics}{Образовательная аналитика}}
+            {}{}
+        {   
+            Цель: факторизация учебных планов образовательных программ на основе кластеризации документов аннотаций учебных дисциплин.\\
+            
+            Сбор данных из открытых источников, валидация и разметка; кластеризация на векторных представлениях документов; метрики Xie-Beni и B-Cubed для оценки качества кластеризации.\\
+        }
+
+    \Experience
+        {\ColorHighlight}
+		{\Large\faGithub\ \href{https://github.com/necroshine0/ds-notebooks}{Data Science and Kaggle repo}}
+            {}{}
+        {   
+            Данный репозиторий показывает мои навыки самостоятельного решения задач машинного обучения и аналитики данных.\\
+        }
+
+    \Experience
+        {\ColorHighlight}
+		{\Large\faGithub\ \href{https://github.com/necroshine0/database-theory-proj}{Database Telegram Bot}}
+            {}{}
+        {   
+            Разработал Telegram-бота, выполняющего get-запросы к базе данных (SQLite3). Участвовал в разработке концептуальной модели базы данных и DDL, полностью прописал DML. Высшая оценка за проект на курсе.\\
+        }
+
+    \Experience
+        {\ColorHighlight}
+		{\Large\faGithub\ \href{https://github.com/necroshine0/maze-proj}{Дискретные операторы}}
+            {}{}
+        {   
+            Программно доказал возможность моделирования поведения мыши в лабиринте с помощью дискретных операторов. Научный консультант: В.В. Толченникова, Биологический факультет МГУ. \\
+        }
+
+    \Experience
+        {\ColorHighlight}
+		{\Large\faGithub\ \href{https://github.com/kaledinandrew/TicTacToeOnline}{Tic-Tac-Toe Online}}
+            {}{}
+        {   
+            Разработал product vision, user stories и UML. Занимался разработкой клиентского приложения на Java (frontend).
+        }
+
+    \end{MainPart}
+
+    
+
 \end{document}
+
+

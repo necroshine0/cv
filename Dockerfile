@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	texlive-generic-recommended \
 	texlive-latex-extra \
 	texlive-fonts-extra \
+	texlive-lang-cyrillic \
 	dvipng \
 	texlive-latex-recommended \
 	texlive-base \
@@ -17,7 +18,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         && apt-get clean \
         && rm -rf /var/lib/apt/lists/*
 
-COPY CV/* ./
+COPY cv/* ./
 COPY runlx.sh ./
 
-CMD [ "bash", "runlx.sh" ]
+CMD [ "bash", "./runlx.sh" ]
