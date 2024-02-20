@@ -1,0 +1,205 @@
+\documentclass[11pt]{spidercv}
+\usepackage[T1]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{fontawesome}
+
+\begin{document}
+
+    %%%%%%% Printable mode
+    \PrintableMode
+
+    %----------------------------------------------------------------------------------------
+    %	TOP BAR
+    %----------------------------------------------------------------------------------------
+    \begin{TopBar}{\ColorTextSide}
+        \Name{\ColorHighlight}{Петров Олег}{}{}
+
+        \TextSeparator{\ColorHighlight}{Желаемая должность}
+
+        \begin{DoubleColumns}
+            \begin{ItemList}{\ColorHighlight}
+                    \item Junior Data Scientist
+            \end{ItemList}
+            \nextcolumn
+            \begin{ItemList}{\ColorHighlight}
+                    \item Junior Data Analyst
+            \end{ItemList}
+        \end{DoubleColumns}
+
+        \vspace*{0.2cm}
+
+        %%% Contact
+        \TextSeparator{\ColorHighlight}{Контакты}
+        % \SimpleSeparator{\ColorHighlight}
+        \begin{DoubleColumns}
+            \begin{ItemList}{\ColorHighlight}
+                \item [\Large\faEnvelopeO] \href{mailto:oepetrov0@gmail.com}{oepetrov0@gmail.com}
+                \item [\Large\faPhone] +7 (993) 907 56-44
+            \end{ItemList}
+            \nextcolumn
+            \begin{ItemList}{\ColorHighlight}
+                \item [\Large\faPaperPlaneO] \href{https://t.me/pauchara0}{pauchara0}
+                \item [\Large\faGithub] \href{https://github.com/necroshine0}{necroshine0}
+                % \item [\Large\faLinkedinSquare] \href{https://www.linkedin.com/}{romainpc}
+            \end{ItemList}
+            \nextcolumn
+            \begin{ItemList}{\ColorHighlight}
+                % \item [\Large\faLinkedinSquare] \href{https://www.linkedin.com/}{romainpc}
+            \end{ItemList}
+        \end{DoubleColumns}
+
+    \end{TopBar}
+
+
+
+    %----------------------------------------------------------------------------------------
+    %	SIDE BAR
+    %----------------------------------------------------------------------------------------
+    \begin{SideBar}{\ColorBackground}{\ColorTextSide}
+        
+        %%% Hard skills
+        \TextSeparatorBis{\ColorHighlight}{Hard skills}{\faGears}
+        \begin{ItemList}{\ColorHighlight}
+            \item [\faCode]Code: Python, C++
+            \item [\faDatabase]\ Data: pandas, SQL, Spark
+            \item [\faBarChartO]Draw: matplotlib, seaborn, shap
+            \item [\faSpinner]ML: scikit-learn, catboost,\\ \ \ \ \ \ statsmodels, etc.
+            \item [\faConnectdevelop]DL: pytorch, gensim,\\ \ \ \ \ \ transformers, gluonts
+            \item [\faLanguage]Английский язык (B2)
+        \end{ItemList}
+
+        \vspace*{0.4cm}
+        
+        %%% Soft skills
+        \TextSeparatorBis{\ColorHighlight}{Soft skills}{\faUser}
+        
+        \Label{\ColorHighlight}{Обучаемость}\\
+        \Label{\ColorHighlight}{Адаптивность}\\
+        \Label{\ColorHighlight}{Педантичность}\\
+        \Label{\ColorHighlight}{Пунктуальность}\\
+
+
+        \vspace*{0.7cm}
+
+        \TextSeparatorBis{\ColorHighlight}{Опыт в графе}{\faCodepen}
+
+        \begin{SpiderDiagram}{\ColorTextSide}{\ColorHighlight}
+            \addSkill{Classic ML \& Analytics}{4}
+            \addSkill{NLP}{3}
+            \addSkill{GenAI}{4}
+            
+        \end{SpiderDiagram}
+
+        \vspace*{0.9cm}
+
+        % \TextSeparatorBis{\ColorHighlight}{Прочее}{\faObjectGroup}
+            
+        % \begin{SkillGauges}{\ColorHighlight}
+        %     \addGauge{Yandex Datasphere}{4}
+        %     \addGauge{Yandex Toloka}{3}
+        %     \addGauge{Bash}{3}
+        %     \addGauge{Git}{2}
+        % \end{SkillGauges}
+        
+    \end{SideBar}
+
+    
+
+    %----------------------------------------------------------------------------------------
+    %	Picture
+    %----------------------------------------------------------------------------------------
+    \DefineProfile{\ColorOther}{\ColorTextSide}{img/cv photo.jpg}
+
+
+
+
+    %----------------------------------------------------------------------------------------
+    %	Main
+    %----------------------------------------------------------------------------------------
+    \begin{MainPart}
+
+    %%% Education
+    \MainTitle{\ColorHighlight}{\ColorTextMain}{Образование}
+    \Experience
+        {\ColorHighlight}
+		{\Large{Бакалавр прикладной математики и информатики}}
+		{НИУ ВШЭ}
+        {2019-2024}
+        {   
+            Специализация <<Машинное обучение и приложения>>, ФКН.\\
+            % Тема диплома: <<Поиск новой физики в данных с помощью генеративных моделей>>.\\
+        }
+
+    %%% Experiences 
+    \MainTitle{\ColorHighlight}{\ColorTextMain}{Опыт работы}
+    \Experience
+        {\ColorHighlight}
+		{\Large{Data Scientist}}
+		{BST Digital}
+            {Сентябрь 2023-\faUndo}
+        {   
+            Занимаюсь R\&D в кластере задач анализа макета документа и обработки естественного языка (в частности, prompt engineering задачами). Также вовлечен в проекты по предиктивной аналитике.
+        }
+    
+    \Experience
+        {\ColorHighlight}
+		{\Large{Стажер-исследователь}}
+		{НИУ ВШЭ, LAMBDA}
+            {Апрель 2023-\faUndo}
+        {   
+            Исследую генеративные модели для поиска Новой физики в данных. Имплементировал в open-source библиотеку модели DDPM и Residual Flow для оценки плотности распределения и условной генерации данных.
+        }
+
+    \Experience
+        {\ColorHighlight}
+		{\Large{Учебный ассистент}}
+		{НИУ ВШЭ, ФКН}
+            {Сентябрь 2021-\faUndo}
+        {   
+            Проверял и консультировал студентов, помогал в организации учебного процесса на курсах по высшей математике, разработке на Python, теории вероятностей и машинному обучению.
+        }
+
+    \MainTitle{\ColorHighlight}{\ColorTextMain}{Проекты}
+    \Experience
+        {\ColorHighlight}
+		{\Large\faGithub\ \href{https://github.com/necroshine0/edu-analytics}{Образовательная аналитика}}
+            {}{}
+        {   
+            Факторизация учебных планов образовательных программ с помощью тематического моделирования. Собрал и разметил данные, использовал метрики Xie-Beni и B-Cubed для оценки качества кластеризации.\\
+        }
+
+  %   \Experience
+  %       {\ColorHighlight}
+		% {\Large\faGithub\ \href{https://github.com/necroshine0/ds-notebooks}{Data Science and Kaggle repo}}
+  %           {}{}
+  %       {   
+  %           Данный репозиторий показывает мои навыки самостоятельного решения задач машинного обучения и аналитики данных.\\
+  %       }
+
+    \Experience
+        {\ColorHighlight}
+		{\Large\faGithub\ \href{https://github.com/necroshine0/maze-proj}{Дискретные операторы}}
+            {}{}
+        {   
+            Смоделировал поведение мыши в лабиринте с помощью дискретных операторов -- паттернов поведения. Выступал на конгрессе VII Съезда РПО. Научный консультант: В.В. Толченникова, НИИ «Развития мозга и высших достижений» РУДН. \\
+        }
+
+    \Experience
+        {\ColorHighlight}
+		{\Large\faGithub\ \href{https://github.com/necroshine0/database-theory-proj}{Database Telegram Bot}}
+            {}{}
+        {   
+            Разработал Telegram-бота, выполняющего сложные SQL-запросы к базе данных. Принимал непосредственное участие разработке концептуальной модели, разработал DML-скрипты.\\
+        }
+
+  %   \Experience
+  %       {\ColorHighlight}
+		% {\Large\faGithub\ \href{https://github.com/kaledinandrew/TicTacToeOnline}{Tic-Tac-Toe Online}}
+  %           {}{}
+  %       {   
+  %           Разработал product vision, user stories и UML. Занимался разработкой клиентского приложения на Java (frontend).
+  %       }
+
+    \end{MainPart}
+
+\end{document}
