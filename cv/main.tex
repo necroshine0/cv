@@ -1,205 +1,173 @@
-\documentclass[11pt]{spidercv}
-\usepackage[T1]{fontenc}
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
 \usepackage[russian]{babel}
-\usepackage{fontawesome}
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{fontawesome5}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+
+% Цвета
+\definecolor{accent}{RGB}{0, 112, 112}   % Более современный цвет (teal)
+\definecolor{lightgray}{RGB}{245, 245, 245}
+\definecolor{darkgray}{RGB}{100, 100, 100}
+
+% Настройка заголовков секций
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+\titleformat{\section}{\large\bfseries\color{accent}}{}{0pt}{}
+\titleformat{\subsection}{\normalsize\bfseries\color{accent}}{}{0pt}{}
+
+% Стиль для списков
+\setlist{leftmargin=*, itemsep=2pt, topsep=2pt, parsep=0pt, partopsep=0pt}
+\renewcommand{\labelitemi}{--}
 
 \begin{document}
 
-    %%%%%%% Printable mode
-    \PrintableMode
-
-    %----------------------------------------------------------------------------------------
-    %	TOP BAR
-    %----------------------------------------------------------------------------------------
-    \begin{TopBar}{\ColorTextSide}
-        \Name{\ColorHighlight}{Петров Олег}{}{}
-
-        \TextSeparator{\ColorHighlight}{Желаемая должность}
-
-        \begin{DoubleColumns}
-            \begin{ItemList}{\ColorHighlight}
-                    \item Junior Data Scientist
-            \end{ItemList}
-            \nextcolumn
-            \begin{ItemList}{\ColorHighlight}
-                    \item Junior Data Analyst
-            \end{ItemList}
-        \end{DoubleColumns}
-
-        \vspace*{0.2cm}
-
-        %%% Contact
-        \TextSeparator{\ColorHighlight}{Контакты}
-        % \SimpleSeparator{\ColorHighlight}
-        \begin{DoubleColumns}
-            \begin{ItemList}{\ColorHighlight}
-                \item [\Large\faEnvelopeO] \href{mailto:oepetrov0@gmail.com}{oepetrov0@gmail.com}
-                \item [\Large\faPhone] +7 (993) 907 56-44
-            \end{ItemList}
-            \nextcolumn
-            \begin{ItemList}{\ColorHighlight}
-                \item [\Large\faPaperPlaneO] \href{https://t.me/pauchara0}{pauchara0}
-                \item [\Large\faGithub] \href{https://github.com/necroshine0}{necroshine0}
-                % \item [\Large\faLinkedinSquare] \href{https://www.linkedin.com/}{romainpc}
-            \end{ItemList}
-            \nextcolumn
-            \begin{ItemList}{\ColorHighlight}
-                % \item [\Large\faLinkedinSquare] \href{https://www.linkedin.com/}{romainpc}
-            \end{ItemList}
-        \end{DoubleColumns}
-
-    \end{TopBar}
-
-
-
-    %----------------------------------------------------------------------------------------
-    %	SIDE BAR
-    %----------------------------------------------------------------------------------------
-    \begin{SideBar}{\ColorBackground}{\ColorTextSide}
-        
-        %%% Hard skills
-        \TextSeparatorBis{\ColorHighlight}{Hard skills}{\faGears}
-        \begin{ItemList}{\ColorHighlight}
-            \item [\faCode]Code: Python, C++
-            \item [\faDatabase]\ Data: pandas, SQL, Spark
-            \item [\faBarChartO]Draw: matplotlib, seaborn, shap
-            \item [\faSpinner]ML: scikit-learn, catboost,\\ \ \ \ \ \ statsmodels, etc.
-            \item [\faConnectdevelop]DL: pytorch, gensim,\\ \ \ \ \ \ transformers, gluonts
-            \item [\faLanguage]Английский язык (B2)
-        \end{ItemList}
-
-        \vspace*{0.4cm}
-        
-        %%% Soft skills
-        \TextSeparatorBis{\ColorHighlight}{Soft skills}{\faUser}
-        
-        \Label{\ColorHighlight}{Обучаемость}\\
-        \Label{\ColorHighlight}{Адаптивность}\\
-        \Label{\ColorHighlight}{Педантичность}\\
-        \Label{\ColorHighlight}{Пунктуальность}\\
-
-
-        \vspace*{0.7cm}
-
-        \TextSeparatorBis{\ColorHighlight}{Опыт в графе}{\faCodepen}
-
-        \begin{SpiderDiagram}{\ColorTextSide}{\ColorHighlight}
-            \addSkill{Classic ML \& Analytics}{4}
-            \addSkill{NLP}{3}
-            \addSkill{GenAI}{4}
-            
-        \end{SpiderDiagram}
-
-        \vspace*{0.9cm}
-
-        % \TextSeparatorBis{\ColorHighlight}{Прочее}{\faObjectGroup}
-            
-        % \begin{SkillGauges}{\ColorHighlight}
-        %     \addGauge{Yandex Datasphere}{4}
-        %     \addGauge{Yandex Toloka}{3}
-        %     \addGauge{Bash}{3}
-        %     \addGauge{Git}{2}
-        % \end{SkillGauges}
-        
-    \end{SideBar}
-
+% ========== ШАПКА ==========
+\begin{minipage}[t]{0.68\textwidth}
+    \vspace{0pt}
+    {\Huge\bfseries Петров Олег Евгеньевич}\\[5pt]
+    {\Large\color{accent} \textbf{Data Scientist \& ML Researcher}}\\[12pt]
     
+    \begin{tabular}{@{}ll@{}}
+        \faPhone & {\large +7 (993) 907-56-44} \\
+        \faTelegram & {\large \href{https://t.me/allwheelsdrive0}{@allwheelsdrive0}} \\
+        \faGithub & {\large \href{https://github.com/necroshine0}{github.com/necroshine0}}
+    \end{tabular}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\textwidth}
+    \vspace{0pt}
+    \raggedleft
+    \includegraphics[width=3cm,height=4cm,keepaspectratio]{img/photo.jpg}
+\end{minipage}
 
-    %----------------------------------------------------------------------------------------
-    %	Picture
-    %----------------------------------------------------------------------------------------
-    \DefineProfile{\ColorOther}{\ColorTextSide}{img/cv photo.jpg}
+\vspace{8pt}
+\hrule
+\vspace{12pt}
 
+% ========== ОБРАЗОВАНИЕ ==========
+\section{Образование}
 
+\noindent\textbf{НИУ ВШЭ, Факультет компьютерных наук} \hfill \textcolor{darkgray}{Москва, 2024–2026}
+\begin{itemize}
+    \item \textbf{Магистратура:} Прикладная математика и информатика, специализация «Искусственный интеллект»
+\end{itemize}
 
+\noindent\textbf{НИУ ВШЭ, Факультет компьютерных наук} \hfill \textcolor{darkgray}{Москва, 2019–2024}
+\begin{itemize}
+    \item \textbf{Бакалавриат:} Прикладная математика и информатика, специализация «Машинное обучение и приложения»
+\end{itemize}
 
-    %----------------------------------------------------------------------------------------
-    %	Main
-    %----------------------------------------------------------------------------------------
-    \begin{MainPart}
-
-    %%% Education
-    \MainTitle{\ColorHighlight}{\ColorTextMain}{Образование}
-    \Experience
-        {\ColorHighlight}
-		{\Large{Бакалавр прикладной математики и информатики}}
-		{НИУ ВШЭ}
-        {2019-2024}
-        {   
-            Специализация <<Машинное обучение и приложения>>, ФКН.\\
-            % Тема диплома: <<Поиск новой физики в данных с помощью генеративных моделей>>.\\
-        }
-
-    %%% Experiences 
-    \MainTitle{\ColorHighlight}{\ColorTextMain}{Опыт работы}
-    \Experience
-        {\ColorHighlight}
-		{\Large{Data Scientist}}
-		{BST Digital}
-            {Сентябрь 2023-\faUndo}
-        {   
-            Занимаюсь R\&D в кластере задач анализа макета документа и обработки естественного языка (в частности, prompt engineering задачами). Также вовлечен в проекты по предиктивной аналитике.
-        }
+% ========== КЛЮЧЕВЫЕ НАВЫКИ ==========
+\section{Ключевые навыки}
+\begin{minipage}[t]{0.48\textwidth}    
+    \textbf{ML:} полный стек, широкая экспертиза
     
-    \Experience
-        {\ColorHighlight}
-		{\Large{Стажер-исследователь}}
-		{НИУ ВШЭ, LAMBDA}
-            {Апрель 2023-\faUndo}
-        {   
-            Исследую генеративные модели для поиска Новой физики в данных. Имплементировал в open-source библиотеку модели DDPM и Residual Flow для оценки плотности распределения и условной генерации данных.
-        }
+    \textbf{DL:} PyTorch, transformers; NLP, CV, GenAI
+    
+    \textbf{Прочее:} распределенные системы (Hadoop, Spark, Hive), SQL (Postgres + PostGIS)
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}   
+    \textbf{MLOps:} Docker, Git, FastAPI, MLflow, AirFlow, bash
+    
+    \textbf{Soft skills:} менторство, коммуникация с заказчиками, ownership задач, системное мышление и оптимизация процессов, быстрая адаптация
+\end{minipage}
 
-    \Experience
-        {\ColorHighlight}
-		{\Large{Учебный ассистент}}
-		{НИУ ВШЭ, ФКН}
-            {Сентябрь 2021-\faUndo}
-        {   
-            Проверял и консультировал студентов, помогал в организации учебного процесса на курсах по высшей математике, разработке на Python, теории вероятностей и машинному обучению.
-        }
+% \begin{minipage}[t]{0.48\textwidth}
+%     \textbf{Языки и данные:} Python, SQL, pandas, geopandas, Spark, Hive, Postgres (PostGIS)
+    
+%     \textbf{ML \& DL:} PyTorch, scikit-learn, transformers, диффузионные модели, LLM, RAG, CV, DLA
+% \end{minipage}
+% \hfill
+% \begin{minipage}[t]{0.48\textwidth}
+%     \textbf{MLOps \& Инструменты:} Docker, Git, FastAPI, MLflow, AirFlow, Linux, bash, CI
+    
+%     \textbf{Soft skills:} Менторство, обучение, коммуникация, педантичность, пунктуальность
+% \end{minipage}
+% \vspace{6pt}
 
-    \MainTitle{\ColorHighlight}{\ColorTextMain}{Проекты}
-    \Experience
-        {\ColorHighlight}
-		{\Large\faGithub\ \href{https://github.com/necroshine0/edu-analytics}{Образовательная аналитика}}
-            {}{}
-        {   
-            Факторизация учебных планов образовательных программ с помощью тематического моделирования. Собрал и разметил данные, использовал метрики Xie-Beni и B-Cubed для оценки качества кластеризации.\\
-        }
+% ========== ОПЫТ РАБОТЫ ==========
+\section{Опыт работы}
 
-  %   \Experience
-  %       {\ColorHighlight}
-		% {\Large\faGithub\ \href{https://github.com/necroshine0/ds-notebooks}{Data Science and Kaggle repo}}
-  %           {}{}
-  %       {   
-  %           Данный репозиторий показывает мои навыки самостоятельного решения задач машинного обучения и аналитики данных.\\
-  %       }
+% \noindent\textbf{Data Scientist} \hfill \textcolor{darkgray}{Сентябрь 2023 — настоящее время} \hfill \textbf{BST Organica}
+\textbf{Data Scientist}\\
+\textit{BST Organica} \hfill \textcolor{gray}{2023 -- 2026}
+\begin{itemize}
+    \item \textbf{Разработал и вывел в прод новый продукт} по оценке экономической перспективности локаций
+    \item \textbf{Написал библиотеку для работы с API}, сократив время на сбор данных в 5 раз
+    \item \textbf{Сократил time-to-market в 7 раз}: подготовил шаблоны и инструкции, обучал новых сотрудников
+    \item Внедрил новые методы валидации моделей и повысил доверие заказчиков к экспертизе
+    \item Успешно провёл годовой многозадачный R\&D для крупного банка
+    \item Занимался доработкой, поддержкой и ребилдом legacy-проектов (80\% всех моделей)
+    \item Более 30 клиентов на счету, включая крупных игроков ритейла и общепита
+\end{itemize}
 
-    \Experience
-        {\ColorHighlight}
-		{\Large\faGithub\ \href{https://github.com/necroshine0/maze-proj}{Дискретные операторы}}
-            {}{}
-        {   
-            Смоделировал поведение мыши в лабиринте с помощью дискретных операторов -- паттернов поведения. Выступал на конгрессе VII Съезда РПО. Научный консультант: В.В. Толченникова, НИИ «Развития мозга и высших достижений» РУДН. \\
-        }
+\vspace{2pt}
+\noindent\textbf{Стажер-исследователь}\\
+\textit{НИУ ВШЭ, LAMBDA Lab} \hfill \textcolor{darkgray}{2023 — 2024} 
+\begin{itemize}
+    \item \textbf{Впервые применил диффузионные модели (DDPM)} для поиска Новой физики в данных
+    \item \textbf{Достиг state-of-the-art качества} в unsupervised anomaly detection
+    \item Приобрёл глубокую экспертизу в генеративных моделях, в частости в задаче детекции аномалий
+\end{itemize}
 
-    \Experience
-        {\ColorHighlight}
-		{\Large\faGithub\ \href{https://github.com/necroshine0/database-theory-proj}{Database Telegram Bot}}
-            {}{}
-        {   
-            Разработал Telegram-бота, выполняющего сложные SQL-запросы к базе данных. Принимал непосредственное участие разработке концептуальной модели, разработал DML-скрипты.\\
-        }
+\vspace{2pt}
+\noindent\textbf{Преподаватель машинного обучения}\\
+\textit{НИУ ВШЭ, ФКН} \hfill \textcolor{darkgray}{2025 — н.в.}
+\begin{itemize}
+    \item Провожу семинары, составляю ДЗ, принимаю экзамены
+    \item \textbf{Оценка студентов:} 5.0 (1-е полугодие), 4.9 (2-е полугодие)
+    \item Ранее — Teacher Assistant по высшей математике, Python, теории вероятностей, ML
+\end{itemize}
 
-  %   \Experience
-  %       {\ColorHighlight}
-		% {\Large\faGithub\ \href{https://github.com/kaledinandrew/TicTacToeOnline}{Tic-Tac-Toe Online}}
-  %           {}{}
-  %       {   
-  %           Разработал product vision, user stories и UML. Занимался разработкой клиентского приложения на Java (frontend).
-  %       }
+\vspace{2pt}
+\noindent\textbf{Ментор проектов}\\
+\textit{Учебный центр «Сириус»} \hfill \textcolor{darkgray}{Декабрь 2025}
+\begin{itemize}
+    \item Руководил проектом для призёров ВсОШ: end-to-end приложение прогноза аренды коммерческой недвижимости на основе геоданных
+\end{itemize}
 
-    \end{MainPart}
+% ========== ИССЛЕДОВАТЕЛЬСКИЕ ПРОЕКТЫ ==========
+% \section{Исследовательские проекты}
+
+% \noindent\textbf{Детекция аномалий во временных рядах с помощью LLM (2026)}
+% \begin{itemize}
+%     \item Первое исследование влияния методов представления мультиканальных временных рядов на входе трансформера. Реализованный собственный подход показал наилучшее качество детекции.
+% \end{itemize}
+
+% \noindent\textbf{Поиск Новой физики (2024)}
+% \begin{itemize}
+%     \item Впервые применил условные диффузионные модели (DDPM) для unsupervised детекции аномалий в физике высоких энергий. Качество близко к SOTA.
+% \end{itemize}
+
+% \noindent\textbf{Образовательная аналитика (2022)}
+% \begin{itemize}
+%     \item Факторизация учебных планов через тематическое моделирование. Метрики: Xie-Beni, B-Cubed.
+% \end{itemize}
+
+% \noindent\textbf{Дискретные операторы (2021)} 
+% \begin{itemize}
+%     \item Моделирование поведения мыши в лабиринте на C++. Выступление на VII Съезде РПО. Научный консультант — В.В. Толченникова (РУДН).
+% \end{itemize}
+
+% ========== УСЛОВИЯ ==========
+\section{Что я ищу}
+\begin{itemize}
+    \item \textbf{Аккредитованную компанию}
+    \item \textbf{Дистанционную работу}, позволяющую совмещать коммерцию и преподавание
+    \item \textbf{Внешнюю деятельность:} обмен опытом на конференциях и митапах
+\end{itemize}
+
+\vspace{8pt}
+\hrule
+\vspace{6pt}
+\begin{center}
+    \textcolor{darkgray}{\small Рекомендации: Евгений Соколов (НИУ ВШЭ), Михаил Гущин (НИУ ВШЭ)\\Контакты по запросу}
+\end{center}
 
 \end{document}
